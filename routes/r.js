@@ -84,9 +84,9 @@ router.get("/todos",authenticateToken,async (req,res)=>{
     }
 })
 
-router.get("/todos/:title",authenticateToken,async (req,res)=>{
+router.get("/todos/:_id",authenticateToken,async (req,res)=>{
     try{
-        const data = await todos.findOne({title:req.body.title})
+        const data = await todos.findOne({title:req.params._id})
         res.send(data)
         console.log(data)
     }
