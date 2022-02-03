@@ -1,0 +1,22 @@
+{
+  "name": "infistack_task_backend",
+  "version": "1.0.0",
+  "description": "this project is back end of infistack task",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sampath kumar",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "gitignore": "^0.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.1.10",
+    "nodemon": "^2.0.15"
+  }
+}
