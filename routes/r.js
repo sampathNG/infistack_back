@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const bcrypt = require("bcrypt")
-const {generatteToken,authenticateToken} = require('../auth/jwt')
+const {generateToken,authenticateToken} = require('../auth/jwt')
 const users = require("../database/db")
 const todos = require("../database/db")
 
@@ -38,7 +38,7 @@ router.post("/signin",async(req,res)=>{
         if(userdata){
             const compare = await bcrypt.compareSync(req.body.password,userdata.password)
             if(compare){
-                const token = generatteToken(req.body)
+                const token = generateToken(req.body)
                 res.send(token)
                 console.log("login succesfull",token)
             }else{
